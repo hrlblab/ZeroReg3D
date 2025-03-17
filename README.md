@@ -1,2 +1,2 @@
-# HyReg3D
-HyReg3D: Hybrid Registration for 3D Whole Slide Image Reconstruction
+# ZeroReg3D
+ZeroReg: A Zero-shot Registration Pipeline for 3D Concecutive Histopathology Image Reconstruction
