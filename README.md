@@ -7,10 +7,6 @@ Histological analysis plays a crucial role in understanding tissue structure and
 # Installation
 ~~~
 conda create -n ZeroReg python=3.8
-~~~
-~~~
 conda activate ZeroReg
-~~~
-~~~
 pip install -r requirements.txt
 ~~~
