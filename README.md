@@ -12,19 +12,19 @@ pip install -r requirements.txt
 ~~~
 
 ## Use
-[optional] If you want to do rotation preprocessing you can use
+[optional] rotation preprocessing
 ~~~
 python rotation_preprocess.py --case_folder <Path/To/Image Folder/> --angle_step <rotation degree>
 python rotate_images.py --input_folder <your case folder> --output_folder <Path/to/Output Folder>
 ~~~
 
-[To get the initial affine registration images]
+To get the initial affine registration images
 ~~~
 python Step1_affine_registration.py --case_folder <Path/To/Image Folder/>
 python Step2_get_3D_inital.py -case_folder <Path/To/Image Folder/>
 ~~~
 
-[To get the final nonrigid registration images]
+To get the final nonrigid registration images
 ~~~
 python Step3_nonrigid_registration.py --case_folder <Path/To/Image Folder/>
 python Step4_get_3D_final.py -case_folder <Path/To/Image Folder/>
