@@ -50,11 +50,11 @@ def rotate_image(image, angle):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="Rotate images based on rotation log CSV.")
     parser.add_argument("--input_folder", type=str, default="12W_1574",
-                        help="Folder containing images and the CSV (default: output_bbox/TX13)")
+                        help="Folder containing images and the CSV")
     parser.add_argument("--output_folder", type=str, default="rotated_12W_1574",
-                        help="Folder where rotated images will be saved (default: output_bbox/TX13/rotated_images)")
+                        help="Folder where rotated images will be saved ")
     parser.add_argument("--csv_name", type=str, default="rotation_log.csv",
-                        help="Name of the rotation CSV file in the input folder (default: rotation_log.csv)")
+                        help="Name of the rotation CSV file in the input folder")
     parser.add_argument("--img_ext", type=str, default=".jpg",
                         help="Image file extension (default: .jpg)")
     parser.add_argument("--image_prefix", type=str, default="image_",

@@ -64,14 +64,14 @@ if __name__ == "__main__":
     parser.add_argument(
         "--source_subfolder",
         type=str,
-        default="affine_registration",
-        help="Subfolder with source images (default: 'registration_3D_raw_xfeat_image')"
+        default="affine_3D_images",
+        help="Subfolder with source images"
     )
     parser.add_argument(
         "--output_subfolder",
         type=str,
         default="nonrigid_displacement",
-        help="Subfolder to store registration outputs (default: 'registration_DeeperHistReg')"
+        help="Subfolder to store registration outputs"
     )
 
     args = parser.parse_args()
@@ -87,7 +87,7 @@ if __name__ == "__main__":
     # Get sorted list of image paths
     image_paths = natsort.natsorted(source_folder.glob("image_*.jpg"))
     if not image_paths:
-        raise ValueError(f"No images found in {source_folder} with pattern 'image_*.jpg'.")
+        raise ValueError(f"No images found")
 
     # Calculate middle index so that for images 1..N, we pick the middle image
     middle_index = (len(image_paths) - 1) // 2

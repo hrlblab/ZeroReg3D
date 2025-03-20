@@ -206,9 +206,9 @@ if __name__ == '__main__':
         description="Run SG affine registration using XFeat on images directly in a folder."
     )
     parser.add_argument('--case_folder', type=str, default='rotated_12W_1574',
-                        help='Folder containing images (default: output_bbox)')
+                        help='Folder containing images')
     parser.add_argument('--small_image_res', type=int, default=1000,
-                        help='Maximum resolution dimension for resizing (default: 1000)')
+                        help='Maximum resolution dimension for resizing')
     args = parser.parse_args()
     
     case_folder = args.case_folder

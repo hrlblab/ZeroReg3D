@@ -55,8 +55,8 @@ if __name__ == '__main__':
     # Define input and output directories.
     image_input_dir = case_folder
     # The affine matrices are expected to be saved in subfolders under this directory.
-    image_output_dir = os.path.join(case_folder, 'registration_raw_xfeat')
-    reconstruction_dir = os.path.join(case_folder, 'registration_3D_raw_xfeat_image')
+    image_output_dir = os.path.join(case_folder, 'affine_registration')
+    reconstruction_dir = os.path.join(case_folder, 'affine_3D_images')
 
     if not os.path.exists(reconstruction_dir):
         os.makedirs(reconstruction_dir)

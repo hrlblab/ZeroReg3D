@@ -147,15 +147,9 @@ if __name__ == '__main__':
                         help="Extension for input images (default: '.jpg')")
     parser.add_argument('--output_extension', type=str, default=".jpg",
                         help="Extension for output images (default: '.jpg')")
-    parser.add_argument('--base_displacement_field_path', type=str,
-                        default="rotated_12W_1574/registration_DeeperHistReg",
-                        help="Base directory for displacement fields (default: rotated_12W_1574/registration_DeeperHistReg)")
-    parser.add_argument('--base_image_path', type=str,
-                        default="rotated_12W_1574/registration_3D_raw_xfeat_image",
-                        help="Directory containing input images (default: rotated_12W_1574/registration_3D_raw_xfeat_image)")
-    parser.add_argument('--output_path', type=str,
-                        default="rotated_12W_1574/nonrigid_3D_image",
-                        help="Output directory for processed images (default: rotated_12W_1574/nonrigid_3D_image)")
+    parser.add_argument('--case_folder', type=str,
+                        default="rotated_12W_1574",
+                        help="Directory containing input images (default: rotated_12W_1574)")
     parser.add_argument('--pattern', type=str, default=None,
                         help="Regex pattern to find available images. If not provided, defaults to a pattern built from input_prefix and input_extension.")
     args = parser.parse_args()
@@ -165,9 +159,9 @@ if __name__ == '__main__':
     output_prefix = args.output_prefix
     input_extension = args.input_extension
     output_extension = args.output_extension
-    base_displacement_field_path = args.base_displacement_field_path
-    base_image_path = args.base_image_path
-    output_path = args.output_path
+    base_displacement_field_path = os.path.join(args.case_folder, "nonrigid_displacement")
+    base_image_path = os.path.join(args.case_folder,"affine_3D_images") 
+    output_path = os.path.join(args.case_folder,"nonrigid_3D_images") 
 
     # Create the output directory if it doesn't exist.
     if not os.path.exists(output_path):
